@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/blury_background"
+    android:scaleType="centerCrop"
+    />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3"
+            android:layout_marginTop="120dp"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:padding="6dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="FARMKART"
+            />
+
+        <TextView
+            android:id="@+id/tagline"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="@string/Tagline"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName" />
+
+        <TextView
+            android:id="@+id/belowTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h2"
+            app:layout_constraintStart_toStartOf="@id/tagline"
+            app:layout_constraintEnd_toEndOf="@id/tagline"
+            app:layout_constraintTop_toBottomOf="@id/tagline"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/belowTag"
+            android:layout_marginTop="15dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/RegisterBtn"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            style="@style/blueButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/belowTag"
+            app:layout_constraintStart_toStartOf="@id/belowTag"
+            app:layout_constraintEnd_toEndOf="@id/belowTag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Register"
+
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginBtn"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            style="@style/whiteButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/RegisterBtn"
+            app:layout_constraintStart_toStartOf="@id/belowTag"
+            app:layout_constraintEnd_toEndOf="@id/belowTag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Login"
+            android:layout_marginTop="10dp"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
